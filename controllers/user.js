@@ -51,6 +51,7 @@ const login = async (req, res) => {
   });
 };
 
+// eslint-disable-next-line require-await
 const getCurrent = async (req, res) => {
   const { email, subscription } = req.user;
 

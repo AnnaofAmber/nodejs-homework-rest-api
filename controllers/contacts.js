@@ -8,13 +8,13 @@ const getAllContacts = async (req, res) => {
   const data =
     favorite === undefined
       ? await Contact.find({ owner }, "-createdAt -updatedAt", {
-          skip,
-          limit,
-        })
+        skip,
+        limit,
+      })
       : await Contact.find({ owner, favorite }, "-createdAt -updatedAt", {
-          skip,
-          limit,
-        });
+        skip,
+        limit,
+      });
   res.json(data);
 };
 
